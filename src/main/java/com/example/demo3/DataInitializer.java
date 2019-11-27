@@ -21,6 +21,7 @@ public class DataInitializer implements CommandLineRunner {
     @Autowired
     UserRepository users;
 
+    @Bean
     PasswordEncoder getEncoder() {
         return new BCryptPasswordEncoder();
     }
@@ -28,7 +29,7 @@ public class DataInitializer implements CommandLineRunner {
     @Autowired
     PasswordEncoder passwordEncoder;
 
-    @Bean
+    
     @Override
     public void run(String... args) throws Exception {
 
